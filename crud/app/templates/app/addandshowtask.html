@@ -18,7 +18,7 @@
                 <table class="table table-hover">
                     <thead>
                     <tr>
-                        <th scope="col">Project</th>
+                        
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
                         <th scope="col">Deadline </th>
@@ -29,12 +29,12 @@
                     <tbody>
                     {% for st in stu %}
                     <tr>
-                        <th scope="row">{{st.id}}</th>
-                        <td>{{st.project}}</td>
-                        <td>{{ st|title }}</td>
+                        <th scope="row">{{st.project}}</th>
+                        
+                        
                         <td>{{st.description}}</td>
                         <td>{{st.deadline}}</td>
-                        <td>{{st|title}}</td>
+                        <td>{{st.status}}</td>
                         <td>
                             <a href="{% url 'updatedata' st.id %}" class="btn btn-warning btn-sm">Edit</a>
                             <form action="{% url 'deletedata' st.id %}" method="post" class="d-inline">
